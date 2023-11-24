@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hirad jafari - project </title>
+    <link rel="stylesheet" href="./assest/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./mast.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-top">
+            <h1>This Accordion by Hirad_jafari</h1>
+        </div>
+        <h2>WEB LANGUAGES</h2>
+        <button class="accordion">HTML</button>
+        <div id="box">
+            <p>
+                Hypertext Markup Language is the standard text markup
+                language used to create web pages. The last version of the
+                language is HTML5. HTML cannot be defined as a programming language.
+                Because a program that works on its own with HTML code can not be written.
+            </p>
+        </div>
+
+        <button class="accordion">CSS</button>
+        <div id="box">
+            <p>
+                Cascading Style Sheets is a Web technology that offers additional
+                possibilities for formatting text and formats in addition to HTML.
+            </p>
+        </div>
+
+        <button class="accordion">JavaScript</button>
+        <div id="box">
+            <p>
+                JavaScript® (usually abbreviated as js) is an object-oriented programming
+                language that is simply interpreted and blended with first-class functions.
+                It is commonly known as a scripting language for web pages, but is often
+                used in non-browser environments such as node.js or Apache CouchDB. Having
+                a prototype-based and multi-paradigm language provides a dynamic and
+                functional structure.
+            </p>
+        </div>
+    </div>
+     
+
+
+    <script>
+        
+
+        let accordion = document.getElementsByClassName("accordion");
+
+        for (let i = 0; i < accordion.length; i++) {
+          accordion[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            let box = this.nextElementSibling;
+            if (box.style.display === "none") {
+              box.style.display = "block";
+            } else {
+              box.style.display = "none";
+            }
+          });
+}
+
+        
+    
+    </script>
+</body>
+</html>
